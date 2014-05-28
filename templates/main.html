@@ -4,83 +4,70 @@
 <div class="container bs-docs-container">
 <div class="row home">
 <div class="col-md-9">
+{%for i,j,k,l in top1Item%}
   <div class=" item col-sm-6 home-img">
-    <a href="www.google.com" class="thumbnail">
-      <img  src="{{ static_url("img/test.png") }}" style=" height:320px; width: 100%; display:block;" alt="...">
+    <!--a href="/f/{{escape(k)}}" class="thumbnail"-->
+    <a href="/f/{{escape(k)}}" class="thumbnail">
+      <img  src="../static/img/top/{{escape(l)}}" style=" height:280px; width: 100%; display:block;" alt="...">
 	<div class="carousel-caption">
-    	<h3>test</h3>
-    	<p>test</p>
+    	<h3>{{escape(i)}}</h3>
+    	<!--p>{{escape(top1Item[0][1])}}</p-->
   	</div>
     </a>
   </div>
+{% end %}
   <div class="col-xs-0 col-sm-6 home-img">
+{%for i,j,k,l in top4Items%}
   <div class="item col-xs-6 home-img">
-    <a href="#" class="thumbnail">
-      <img  src="{{ static_url("img/test4.png") }}" style="height: 160px; width: 100%; display:block;" alt="...">
-    </a>
+    <a href="/f/{{escape(k)}}" class="thumbnail">
+      <img  src="../static/img/top/{{escape(l)}}" style="height: 140px; width: 100%; display:block;" alt="...">
 	<div class="carousel-caption">
-    	<h3>test</h3>
-    	<p>test</p>
+	<h4>{{escape(i)}}</h4>
   	</div>
-  </div>
-  <div class="item col-xs-6 home-img">
-    <a href="#" class="thumbnail">
-      <img  src="{{ static_url("img/test2.png") }}" style="height: 160px; width: 100%; display:block;" alt="...">
     </a>
-	<div class="carousel-caption">
-    	<h3>test</h3>
-    	<p>test</p>
-  	</div>
   </div>
-  <div class="item col-xs-6 home-img">
-    <a href="#" class="thumbnail">
-      <img  src="{{ static_url("img/test3.png") }}" style="height: 160px; width: 100%; display:block;" alt="...">
-    </a>
-	<div class="carousel-caption">
-    	<h3>test</h3>
-    	<p>test</p>
-  	</div>
-  </div>
-  <div class="item col-xs-6 home-img">
-    <a href="#" class="thumbnail">
-      <img  src="{{ static_url("img/test1.png") }}" style="height: 160px; width: 100%; display:block;" alt="...">
-    </a>
-	<div class="carousel-caption">
-    	<h3>test</h3>
-    	<p>test</p>
-  	</div>
-  </div>
+{% end %}
 </div>
 </div>
 <div class="col-md-3">
-客户端app，二维码
+<!--客户端app，二维码-->
+<section class="sidebar-ad">
+<!--a href="#" target="_blank" title="4G有多爽？" class="external"-->
+<a href="#"  title="4G有多爽？" class="external">
+<img alt="4G有多爽？" height="280" src="http://a.36krcnd.com/poster/53f7f6c10093c3fe9447e0cdbe8ac0f0.jpg" width="100%">
+</a>
+
+</section>
 </div>
 </div>
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3>
 <div class="row">        
-<div class="col-md-2">
-分类
+<div class="col-md-2 side">
+{% include "layout/lsider.html" %}
 </div>
 <div class="col-md-7  topiclist">
-<div class="article-list idx-list">
-<div class="col-sm-4">
-<a href="/article/33862/1.html" class="a-img" target="_blank"><img style="width: 100%; " src="http://img.huxiu.com/portal/201405/16/103710vlhjukj4sk5s2g22.jpg.thumb.jpg"></a>
+<h3 class="t-h2"><em>最新产品</em><a href="/opinions" class="more">More...</a></h3>
+{%for i,j,k,l,m,n,o,p,q in articlesItems%}
+<div class="clearfix article-box">
+	<div class="col-sm-4">
+	<a href="/new/{{escape(k)}}" class="a-img" target="_blank"><img style="width: 100%; " src="../static/img/top/{{escape(m)}}"></a>
+	</div>
+	<div class="col-sm-8 content">
+	<h4><a href="/new/{{escape(k)}}" target="_blank">{{escape(i)}}</a></h4>
+		<div class="box-other">
+ 		<span class="source-quote"><a class="hx-card" userid="12801" href="/member/12801.html" target="_blank">{{escape(l)}}</a></span>
+ 		<time>{{escape(str(q))}}</time>
+		</div>
+		<div class="article-summary">{{escape(j)}}</div>
+		<p class="tags-box"><a href="/tags/105.html" target="_blank">{{escape(p)}}</a><i class="i-icon-bottom"></i>
+		<span class="comment-box pull-right"><i class="icon-comment"></i><a href="/comment/33862/1.html#odby" target="_blank">read:{{escape(str(n))}} coment:{{escape(str(o))}}</a></span>
+		</p>
+	</div>
 </div>
-<div class="col-sm-8">
-<h4><a href="/article/33862/1.html" target="_blank">谷歌年度公开信：未来走向何方？</a></h4>
-<div class="box-other">
- <span class="source-quote"><a class="hx-card" userid="12801" href="/member/12801.html" target="_blank">Google</a></span>
- <time>2014-05-16 10:37</time>
-</div>
-<div class="article-summary">不被以往行事方式所束缚，建立起远大的目标，用“登月”的思维方式，那么实现的东西将非常有趣。</div>
-<p class="tags-box"><a href="/tags/83.html" target="_blank">谷歌</a><a href="/tags/105.html" target="_blank">拉里·佩奇</a><i class="i-icon-bottom"></i>
-<span class="comment-box pull-right"><i class="icon-comment"></i><a href="/comment/33862/1.html#odby" target="_blank">read:137 coment:10</a></span>
-</p>
-</div>
-</div>
+{% end %}
 </div>
 <div class="col-md-3">
-热点
+{% include "layout/rsider.html" %}
 </div>
 </div>
 </div>

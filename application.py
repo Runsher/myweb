@@ -23,7 +23,9 @@ if __name__ == '__main__':
         tornado.options.parse_command_line()
         app=tornado.web.Application(
                 handlers=[
-                        (r'/',Home.IndexHandler)
+                        (r'/',Home.IndexHandler),
+                        (r'/f/(.*)',Home.TopHandler),
+                        (r'/new/(.*)',Home.NewHandler)
 			],**settings
 		)
 
