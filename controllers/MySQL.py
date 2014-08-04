@@ -32,7 +32,8 @@ class MysqlQuery():
                                 host = host,
                                 user = user,
                                 port = port,
-                                passwd = passwd
+                                passwd = passwd,
+								charset = 'utf8'
                         )
                         cur=conn.cursor()
                         cur.execute(sqlCommand)
@@ -50,7 +51,8 @@ class MysqlQuery():
                                 host = host,
                                 user = user,
                                 port = port,
-                                passwd = passwd
+                                passwd = passwd,
+								charset = 'utf8'
                         )
                         cur=conn.cursor()
                         cur.execute(sqlCommand)

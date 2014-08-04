@@ -1,6 +1,6 @@
 #-*- encoding:utf-8 -*-
 import sys
-sys.path.append('/root/ye/myjob/myweb/controllers')
+sys.path.append('/yeq/myweb/controllers')
 
 import os
 import tornado.ioloop
@@ -8,7 +8,7 @@ import tornado.web
 import Home
 
 from tornado.options import define, options
-define("port", default = 80, help = "run on the given port", type = int)
+define("port", default = 8825, help = "run on the given port", type = int)
 
 settings = {
         #"cookie_secret" : "61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o/Vo=",

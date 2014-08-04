@@ -1,8 +1,8 @@
 {% include "layout/top.html" %}
-<body>
+<body style="background-color: #f0f0f0">
 	{% include "layout/header.html" %}
 <div class="container bs-docs-container">
-<div class="row home">
+<div class="row home well">
 <div class="col-md-9">
 {%for i,j,k,l in top1Item%}
   <div class=" item col-sm-6 home-img">
@@ -32,23 +32,63 @@
 <div class="col-md-3">
 <!--客户端app，二维码-->
 <section class="sidebar-ad">
-<!--a href="#" target="_blank" title="4G有多爽？" class="external"-->
+<!--a href="#" target="_blank" title="4G有多爽？" class="externa>
 <a href="#"  title="4G有多爽？" class="external">
 <img alt="4G有多爽？" height="280" src="http://a.36krcnd.com/poster/53f7f6c10093c3fe9447e0cdbe8ac0f0.jpg" width="100%">
-</a>
+</a-->
+<p>
+  <button type="button" style="width: 100%;" class="btn btn-danger btn-lg">Apple专区</button>
+</p>
+<p>
+  <button type="button" style="width: 100%;" class="btn btn-danger btn-lg">小米专区</button>
+</p>
 
 </section>
 </div>
 </div>
+<div class="biaoqian idx-biaoqian">
+	<a href="/tags/374.html" target="_blank">大数据</a>|
+	<a href="/tags/29.html" target="_blank">创业</a>|
+	<a href="/tags/40.html" target="_blank">百度</a>|
+	<a href="/tags/54.html" target="_blank">苹果</a>|
+	<a href="/tags/35.html" target="_blank">马云</a>|
+	<a href="/tags/79.html" target="_blank">移动互联网</a>|
+	<a href="/tags/68.html" target="_blank">微信</a>|
+	<a href="http://www.huxiu.com/zhuanti/hxlenovoznds" target="_blank">智能电视</a>
+</div>
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3>
 <div class="row">        
-<div class="col-md-2 side">
-{% include "layout/lsider.html" %}
-</div>
-<div class="col-md-7  topiclist">
-<h3 class="t-h2"><em>最新产品</em><a href="/opinions" class="more">More...</a></h3>
+<!--div class="col-md-2 side">
+</div-->
+<div class="col-md-6  topiclist">
+<!--h3 class="t-h2"><em>最新产品</em><a href="/opinions" class="more">More...</a></h3-->
 {%for i,j,k,l,m,n,o,p,q in articlesItems%}
-<div class="clearfix article-box">
+<div class="clearfix article-box well">
+	<div class="col-sm-4">
+	<a href="/new/{{escape(k)}}" class="a-img" target="_blank"><img style="width: 100%; " src="../static/img/top/{{escape(m)}}">
+<i class="i-ico-re" title="热门文章">热门文章</i>
+</a>
+	</div>
+	<div class="col-sm-8 content">
+	<h4><a href="/new/{{escape(k)}}" target="_blank">{{escape(i)}}</a></h4>
+		<div class="box-other">
+ 		<span class="source-quote"><a class="hx-card" userid="12801" href="/member/12801.html" target="_blank">{{escape(l)}}</a></span>
+ 		<time>{{escape(str(q))}}</time>
+		</div>
+		<div class="article-summary">{{escape(j)}}</div>
+		<p class="tags-box"><a href="/tags/105.html" target="_blank">{{escape(p)}}</a><i class="i-icon-bottom"></i>
+		<!--span class="comment-box pull-right"><i class="icon-comment"></i><a href="/comment/33862/1.html#odby" target="_blank">read:{{escape(str(n))}} coment:{{escape(str(o))}}</a></span-->
+		</p>
+	</div>
+</div>
+{% end %}
+</div>
+<div style="width:12px">
+</div>
+<div class="col-md-6  topiclist topiclistr">
+<!--h3 class="t-h2"><em>最新产品</em><a href="/opinions" class="more">More...</a></h3-->
+{%for i,j,k,l,m,n,o,p,q in articlesItems%}
+<div class="clearfix article-box well">
 	<div class="col-sm-4">
 	<a href="/new/{{escape(k)}}" class="a-img" target="_blank"><img style="width: 100%; " src="../static/img/top/{{escape(m)}}"></a>
 	</div>
@@ -60,16 +100,17 @@
 		</div>
 		<div class="article-summary">{{escape(j)}}</div>
 		<p class="tags-box"><a href="/tags/105.html" target="_blank">{{escape(p)}}</a><i class="i-icon-bottom"></i>
-		<span class="comment-box pull-right"><i class="icon-comment"></i><a href="/comment/33862/1.html#odby" target="_blank">read:{{escape(str(n))}} coment:{{escape(str(o))}}</a></span>
+		<!--span class="comment-box pull-right"><i class="icon-comment"></i><a href="/comment/33862/1.html#odby" target="_blank">read:{{escape(str(n))}} coment:{{escape(str(o))}}</a></spani-->
 		</p>
 	</div>
 </div>
 {% end %}
 </div>
-<div class="col-md-3">
+<!--div class="col-md-3">
 {% include "layout/rsider.html" %}
+</div-->
 </div>
-</div>
+{% include "layout/footer.html" %}
 </div>
 </body>
 </html>

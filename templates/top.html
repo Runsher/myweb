@@ -1,15 +1,27 @@
 {% include "layout/top.html" %}
-<body>
+<body style="background-color: rgb(240, 240, 240);">
         {% include "layout/header.html" %}
 <div class="container bs-docs-container">
-<div class="row home">
+<div class="biaoqian idx-biaoqian">
+	<a href="/tags/374.html" target="_blank">大数据</a>|
+	<a href="/tags/29.html" target="_blank">创业</a>|
+	<a href="/tags/40.html" target="_blank">百度</a>|
+	<a href="/tags/54.html" target="_blank">苹果</a>|
+	<a href="/tags/35.html" target="_blank">马云</a>|
+	<a href="/tags/79.html" target="_blank">移动互联网</a>|
+	<a href="/tags/68.html" target="_blank">微信</a>|
+	<a href="http://www.huxiu.com/zhuanti/hxlenovoznds" target="_blank">智能电视</a>
+</div>
+<div style="height:10px;">
+</div>
+<div class="row home well">
 {%for i,j,k,l in info%}
-   <div class="item col-sm-2">
-   </div>
+   <!--div class="item col-sm-2">
+   </div-->
   <div class=" item col-sm-7 home-img">
-        <h2>{{escape(i)}}</h2>
+        <h3>{{escape(i)}}</h3>
       <img  src="../static/img/top/{{escape(l)}}" style=" height:420px; width: 100%; display:block;" alt="...">
-	<p>{{escape(j)}}</p>
+	<h4>{{escape(j)}}</h4>
   </div>
    <div class="item col-sm-3">
    </div>
